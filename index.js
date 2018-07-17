@@ -5,7 +5,7 @@ var isgd = require('isgd');
 
 var TakimotoHifumi = require('./TakimotoHifumi');
 new TakimotoHifumi();
-//var SuzukazeAoba = require('./SuzukazeAoba');
-//new SuzukazeAoba();
+var SuzukazeAoba = require('./SuzukazeAoba');
+new SuzukazeAoba();
 
 console.log('Started');
