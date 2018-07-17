@@ -1,0 +1,34 @@
+{
+  "name": "new-game-reddit-twitter-bots",
+  "version": "1.0.0",
+  "description": "Every bot from the subreddits of the anime \"New Game!\" ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EXtremeExploit/new-game-reddit-twitter-bots.git"
+  },
+  "keywords": [
+    "new",
+    "game",
+    "anime",
+    "reddit",
+    "twitter",
+    "bot"
+  ],
+  "author": "EXtremeExploit",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/EXtremeExploit/new-game-reddit-twitter-bots/issues"
+  },
+  "homepage": "https://github.com/EXtremeExploit/new-game-reddit-twitter-bots#readme",
+  "dependencies": {
+    "dotenv": "^6.0.0",
+    "isgd": "^1.1.3",
+    "snoostorm": "0.0.5",
+    "snoowrap": "^1.15.2",
+    "twit": "^2.2.11"
+  }
+}
