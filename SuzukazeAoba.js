@@ -35,14 +35,13 @@ class SuzukazeAoba {
                 twit.post('statuses/update', {
                     status: '(' + link + ') ' + sub.title
                 }).then((tw) => {
-                    console.log('Posted:' + tw.data.text);
+                    console.log('[r/SuzukazeAoba] Posted:' + tw.data.text);
                 }).catch(err => console.log(err));
             });
 
         });
     }
 }
-
 
 console.log('Loaded r/SuzukazeAoba');
 

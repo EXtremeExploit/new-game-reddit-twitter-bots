@@ -35,7 +35,7 @@ class TakimotoHifumi {
                 twit.post('statuses/update', {
                     status: '(' + link + ') ' + sub.title
                 }).then((tw) => {
-                    console.log('Posted:' + tw.data.text);
+                    console.log('[r/TakimotoHifumi] Posted:' + tw.data.text);
                 }).catch(err => console.log(err));
             });
 
