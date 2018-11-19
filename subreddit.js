@@ -1,6 +1,8 @@
 class Subreddit {
     /**
      * Subreddit
+     * @param {string} subreddit 
+     * @param {Object} credentials
      */
     constructor(subreddit, credentials) {
         this.subreddit = subreddit;
