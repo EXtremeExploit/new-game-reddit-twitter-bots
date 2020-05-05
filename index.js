@@ -1,7 +1,6 @@
 require('dotenv').config();
 
 var subreddit = require('./subreddit');
-
 new subreddit('TakimotoHifumi', {
     twitter: {
         access_token: process.env.TakimotoHifumi_twitter_accesToken,
