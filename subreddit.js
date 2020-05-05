@@ -18,12 +18,18 @@ class Subreddit {
         // Reddit setup
         var _reddit = require('snoowrap');
         var snoostorm = require('snoostorm');
-        var r = new _reddit(this.credentials.reddit);
-        const reddit = new snoostorm(r);
 
+        var r = new _reddit({
+            userAgent: this.credentials.reddit.userAgent,
+            username: this.credentials.reddit.username,
+            password: this.credentials.reddit.password,
+            clientId: this.credentials.reddit.clientId,
+            clientSecret: this.credentials.reddit.clientSecret,
+
+        });
         // The bot itself
-        reddit.SubmissionStream({
-            subreddit: this.subreddit
+        new snoostorm.SubmissionStream(r,{
+            subreddit: this.subreddit,
         }).on('submission', sub => {
             isgd.shorten('https://www.reddit.com/' + sub.permalink, (link) => {
                 twit.post('statuses/update', {
