@@ -28,7 +28,7 @@ class Subreddit {
 
         });
         // The bot itself
-        new snoostorm.SubmissionStream(r,{
+        new snoostorm.SubmissionStream(r, {
             subreddit: this.subreddit,
         }).on('submission', sub => {
             isgd.shorten('https://www.reddit.com/' + sub.permalink, (link) => {
@@ -36,7 +36,11 @@ class Subreddit {
                     status: '(' + link + ') ' + sub.title
                 }).then((tw) => {
                     console.log('[r/' + this.subreddit + '] Posted:' + tw.data.text);
-                }).catch(err => console.log(err));
+                }).catch(err => {
+                    console.log('ERROR:');
+                    console.error(err);
+                    console.log('======')
+                });
             });
 
         });
